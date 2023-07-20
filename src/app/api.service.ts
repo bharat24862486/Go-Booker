@@ -14,6 +14,16 @@ export class ApiService {
     return this.http.get<any>('http://localhost:5000/movies');
   }
 
+  fetchSingleMovieData(ID:string): Observable<any> {
+    return this.http.get<any>(`http://localhost:5000/single_movie/${ID}`)
+  }
+
+  fetchSingleMovieCinema(name:string): Observable<any> {
+    return this.http.get<any>(`http://localhost:5000/single_movie_cinema/${name}`)
+  }
+
+  searchState:boolean = false;
+
   
 
   

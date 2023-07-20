@@ -1,4 +1,5 @@
 import { Component,OnInit, NgModule } from '@angular/core';
+import {  Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 
 interface movieData{
@@ -63,7 +64,7 @@ export class HomeComponent implements OnInit {
     "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAyOSBKdWwgb253YXJkcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00363285-nrwmyshgkk-portrait.jpg"
   ]
 
-  constructor(private fetcher:ApiService) {}
+  constructor(private fetcher:ApiService, private router: Router) {}
 
   ngOnInit(): void {
     this.fetcher.fetchMovieData().subscribe((res)=>{
@@ -75,6 +76,27 @@ export class HomeComponent implements OnInit {
         this.arr2.push(res[i])
       }
     })
+
+    this.changer()
     
   }
+
+  value:any
+
+  changer(){
+    this.value = this.fetcher.searchState
+  }
+
+  onClickChange(){
+    this.fetcher.searchState = !this.fetcher.searchState
+    this.value = this.fetcher.searchState
+  }
+
+
+  getClickData(data:any){
+    console.log(data)
+    this.router.navigate([`/singleMovie/${data._id}`])
+
+  }
+
 }

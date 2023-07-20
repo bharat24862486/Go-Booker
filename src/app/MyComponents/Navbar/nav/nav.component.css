@@ -108,3 +108,11 @@
     margin-left: 5px;
 }
   
+
+.search {
+  position:sticky;
+  top: 10px; 
+  padding: 10px;
+  height: 80vh;
+  background-color: white;
+}

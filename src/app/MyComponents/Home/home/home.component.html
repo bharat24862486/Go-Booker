@@ -6,17 +6,17 @@
             <slide>
                 <div class="flex1">
                     <div *ngFor="let item of arr1">
-                        <div>
+                        <div (click)="getClickData(item)">
                             <img src={{item.img}} class="Images1" />
                         </div>
                     </div>
-    
+
                 </div>
             </slide>
             <slide>
                 <div class="flex1">
                     <div *ngFor="let item of arr2">
-                        <div>
+                        <div (click)="getClickData(item)">
                             <img src={{item.img}} class="Images1" />
                         </div>
                     </div>
@@ -25,7 +25,9 @@
         </carousel>
     </div>
     <div class="main_cont3">
-        <img class="Images2" src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120:q-80/stream-leadin-web-collection-202210241242.png" alt="">
+        <img class="Images2"
+            src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120:q-80/stream-leadin-web-collection-202210241242.png"
+            alt="">
     </div>
 
     <div class="main_cont2">
@@ -38,7 +40,7 @@
                             <img src={{item}} class="Images1" />
                         </div>
                     </div>
-    
+
                 </div>
             </slide>
             <slide>
@@ -59,17 +61,17 @@
             <slide>
                 <div class="flex1">
                     <div *ngFor="let item of arr1">
-                        <div>
+                        <div (click)="getClickData(item)">
                             <img src={{item.img}} class="Images1" />
                         </div>
                     </div>
-    
+
                 </div>
             </slide>
             <slide>
                 <div class="flex1">
                     <div *ngFor="let item of arr2">
-                        <div>
+                        <div (click)="getClickData(item)">
                             <img src={{item.img}} class="Images1" />
                         </div>
                     </div>
@@ -78,7 +80,9 @@
         </carousel>
     </div>
     <div class="main_cont3">
-        <img class="Images2" src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120:q-80/stream-leadin-web-collection-202210241242.png" alt="">
+        <img class="Images2"
+            src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120:q-80/stream-leadin-web-collection-202210241242.png"
+            alt="">
     </div>
 
     <div class="main_cont2">
@@ -91,7 +95,7 @@
                             <img src={{item}} class="Images1" />
                         </div>
                     </div>
-    
+
                 </div>
             </slide>
             <slide>
@@ -107,7 +111,8 @@
     </div>
 
     <div class="main_cont4">
-        <img class="Images1" src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120:q-80/premiere-banner-web-collection-202208191200.png" />
+        <img class="Images1"
+            src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120:q-80/premiere-banner-web-collection-202208191200.png" />
         <h3 class="premiers1">Premiers</h3>
         <h4 class="premiers2">Brand New Releases Every Friday</h4>
         <div class="flex1">
@@ -131,7 +136,7 @@
                             <img src={{item}} class="Images1" />
                         </div>
                     </div>
-    
+
                 </div>
             </slide>
             <slide>
@@ -150,3 +155,9 @@
 
 
 </div>
+
+
+<!-- <ng-template #searchpage>
+   
+
+</ng-template> -->
