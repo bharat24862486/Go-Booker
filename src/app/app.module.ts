@@ -10,6 +10,8 @@ import { HomeComponent } from './MyComponents/Home/home/home.component';
 import { Carosal1Component } from './MyComponents/Home/Carosal1/carosal1/carosal1.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './MyComponents/Footer/footer/footer.component';
+import { SingleComponent } from './MyComponents/Pages/SingleMovie/single/single.component';
+import { SingleMovieCinemaComponent } from './MyComponents/Pages/SingleMovieCinema/single-movie-cinema/single-movie-cinema.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FooterComponent } from './MyComponents/Footer/footer/footer.component';
     NavComponent,
     HomeComponent,
     Carosal1Component,
-    FooterComponent
+    FooterComponent,
+    SingleComponent,
+    SingleMovieCinemaComponent
   ],
   imports: [
     BrowserModule,

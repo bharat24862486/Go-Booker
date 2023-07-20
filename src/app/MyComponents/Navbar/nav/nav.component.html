@@ -6,8 +6,8 @@
     </div>
   </div>
 
-  <div class="form-controls">
-    <input type="text" placeholder="Search Movies By Name"/>
+  <div class="form-controls" (click)="onClickChange()">
+    <input type="text" placeholder="Search Movies By Name" />
   </div>
 
   <div class="form-controls2">
@@ -27,7 +27,27 @@
   </div>
 
   <div>
-    <i class="fa-solid fa-bars" style="color: #ffcc00;"></i>
+    <div>
+      <div *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+        <button class="btn btn-outline-warning ml-2" type="button" (click)="auth.logout()">Log out</button>
+      </div>
+    </div>
+    <div>
+      <ng-template #loggedOut>
+        <button #loggedOut class="btn btn-outline-warning ml-2" type="button" (click)="auth.loginWithRedirect()">Log
+          in</button>
+      </ng-template>
+    </div>
   </div>
 
 </nav>
+
+
+<div *ngIf="value">
+  <div class="search">
+    <div style="text-align: end; padding: 1%;">
+      <span (click)="onClickChange()"> <i class="fa-solid fa-x"></i></span>
+    </div>
+
+  </div>
+</div>
