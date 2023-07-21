@@ -1,4 +1,7 @@
 <div>
+    <div class="head">
+        <h1>{{movieName}}</h1>
+    </div>
     <div *ngIf="datas.length>0">
         <div *ngFor="let i of datas">
             <div class="main">
@@ -18,7 +21,7 @@
                 </div>
                 <div class="main3">
                     <div *ngFor="let j of i.time">
-                        <button class="btn">{{j}}</button>
+                        <button class="btn" (click)="setSeats(j)">{{j}}</button>
                     </div>
                 </div>
             </div>
