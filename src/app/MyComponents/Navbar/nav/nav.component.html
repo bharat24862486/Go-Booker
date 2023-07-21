@@ -1,5 +1,5 @@
 <nav class="navbar">
-  <div>
+  <div (click)="getHome()" style="cursor: pointer;">
     <div class="logo">
       <span class="logo-icon">G</span>
       <span class="logo-text">oBooker</span>
@@ -11,33 +11,40 @@
   </div>
 
   <div class="form-controls2">
-    <select>
-      <option>Delhi NCR</option>
-      <option>Ahmendabad</option>
-      <option>Bangaluru</option>
-      <option>Chandigarh</option>
-      <option>Chennai</option>
-      <option>Hydrabad</option>
-      <option>Kolkata</option>
-      <option>Mumbai</option>
-      <option>Jaipur</option>
-      <option>Ghaziabad</option>
-      <option>Indore</option>
+    <select [(ngModel)]="this.fetcher.getLocation" (change)="getChange()">
+      <option value="Select a location" disabled selected>Select a location</option>
+      <option value="Delhi NCR">Delhi NCR</option>
+      <option value="Ahmedabad">Ahmedabad</option>
+      <option value="Bangalore">Bengaluru</option>
+      <option value="Chandigarh">Chandigarh</option>
+      <option value="Chennai">Chennai</option>
+      <option value="Hyderabad">Hyderabad</option>
+      <option value="Kolkata">Kolkata</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Jaipur">Jaipur</option>
+      <option value="Ghaziabad">Ghaziabad</option>
+      <option value="Indore">Indore</option>
     </select>
   </div>
 
+
   <div>
-    <div>
-      <div *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+
+    <div *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+      <div class="twoBtn">
+        <button class="btn btn-outline-warning ml-2" type="button" (click)="profile()">Profile</button>&nbsp;
         <button class="btn btn-outline-warning ml-2" type="button" (click)="auth.logout()">Log out</button>
       </div>
     </div>
-    <div>
-      <ng-template #loggedOut>
+
+
+    <ng-template #loggedOut>
+      <div>
         <button #loggedOut class="btn btn-outline-warning ml-2" type="button" (click)="auth.loginWithRedirect()">Log
           in</button>
-      </ng-template>
-    </div>
+      </div>
+    </ng-template>
+
   </div>
 
 </nav>

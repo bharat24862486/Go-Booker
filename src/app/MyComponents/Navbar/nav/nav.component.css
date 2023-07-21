@@ -99,7 +99,7 @@
 }
 
 .logo-icon {
-    background-color: #ffcc00;
+    background-color: #FFC107;
     padding: 5px 10px;
     border-radius: 50%;
 }
@@ -116,3 +116,10 @@
   height: 80vh;
   background-color: white;
 }
+
+/* .twoBtn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+} */

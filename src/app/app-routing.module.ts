@@ -3,11 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './MyComponents/Home/home/home.component';
 import { SingleComponent } from './MyComponents/Pages/SingleMovie/single/single.component';
 import { SingleMovieCinemaComponent } from './MyComponents/Pages/SingleMovieCinema/single-movie-cinema/single-movie-cinema.component';
+import { UserProfileComponent } from './MyComponents/Pages/Profile/user-profile/user-profile.component';
+import { PaymentPageComponent } from './MyComponents/Pages/Payment/payment-page/payment-page.component';
+import { SeatBookingComponent } from './MyComponents/Pages/SeatsPage/seat-booking/seat-booking.component';
 
 const routes: Routes = [
   {path:'' , component: HomeComponent},
   {path:'singleMovie/:id' , component: SingleComponent},
-  {path:'singleMovieCinema/:name' , component: SingleMovieCinemaComponent}
+  {path:'singleMovieCinema/:name' , component: SingleMovieCinemaComponent},
+  {path:'userprofile' , component: UserProfileComponent},
+  {path:'planPayment/:name' , component: PaymentPageComponent},
+  {path:'setSeats/:name' , component: SeatBookingComponent}
 ];
 
 @NgModule({

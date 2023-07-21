@@ -12,6 +12,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './MyComponents/Footer/footer/footer.component';
 import { SingleComponent } from './MyComponents/Pages/SingleMovie/single/single.component';
 import { SingleMovieCinemaComponent } from './MyComponents/Pages/SingleMovieCinema/single-movie-cinema/single-movie-cinema.component';
+import { UserProfileComponent } from './MyComponents/Pages/Profile/user-profile/user-profile.component';
+import { PaymentPageComponent } from './MyComponents/Pages/Payment/payment-page/payment-page.component';
+import { FormsModule } from '@angular/forms';
+import { SeatBookingComponent } from './MyComponents/Pages/SeatsPage/seat-booking/seat-booking.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,10 @@ import { SingleMovieCinemaComponent } from './MyComponents/Pages/SingleMovieCine
     Carosal1Component,
     FooterComponent,
     SingleComponent,
-    SingleMovieCinemaComponent
+    SingleMovieCinemaComponent,
+    UserProfileComponent,
+    PaymentPageComponent,
+    SeatBookingComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +42,8 @@ import { SingleMovieCinemaComponent } from './MyComponents/Pages/SingleMovieCine
         redirect_uri: window.location.origin
       }
     }),
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
