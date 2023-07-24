@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '@auth0/auth0-angular';
 import { ApiService } from 'src/app/api.service';
 
@@ -40,7 +40,7 @@ export class SeatBookingComponent implements OnInit {
   total: number = 0
   userInfo: any = {}
 
-  constructor(private getParam: ActivatedRoute, private fetcher: ApiService, private auth: AuthService) {
+  constructor(private getParam: ActivatedRoute, private fetcher: ApiService, private auth: AuthService, private router:Router) {
     // Initialize seats for each section
     this.initializeSeats();
   }
@@ -103,9 +103,9 @@ export class SeatBookingComponent implements OnInit {
   toggleBooking(seat: Seat) {
     seat.booked = !seat.booked;
     if (seat.booked) {
-      alert(`Seat ${seat.seatNumber} has been booked.`);
+      // alert(`Seat ${seat.seatNumber} has been booked.`);
     } else {
-      alert(`Seat ${seat.seatNumber} has been unbooked.`);
+      // alert(`Seat ${seat.seatNumber} has been unbooked.`);
     }
   }
 
@@ -165,7 +165,7 @@ export class SeatBookingComponent implements OnInit {
 
   // Close ticket summary modal
   closeTicketSummary() {
-    this.showTicketSummary = false;
+    this.router.navigate(["/final_payment"])
   }
 
 

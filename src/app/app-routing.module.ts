@@ -6,6 +6,7 @@ import { SingleMovieCinemaComponent } from './MyComponents/Pages/SingleMovieCine
 import { UserProfileComponent } from './MyComponents/Pages/Profile/user-profile/user-profile.component';
 import { PaymentPageComponent } from './MyComponents/Pages/Payment/payment-page/payment-page.component';
 import { SeatBookingComponent } from './MyComponents/Pages/SeatsPage/seat-booking/seat-booking.component';
+import { FinalPaymentComponent } from './MyComponents/Pages/FinalPayment/final-payment/final-payment.component';
 
 const routes: Routes = [
   {path:'' , component: HomeComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path:'singleMovieCinema/:name' , component: SingleMovieCinemaComponent},
   {path:'userprofile' , component: UserProfileComponent},
   {path:'planPayment/:name' , component: PaymentPageComponent},
-  {path:'setSeats/:name' , component: SeatBookingComponent}
+  {path:'setSeats/:name' , component: SeatBookingComponent},
+  {path:'final_payment' , component: FinalPaymentComponent}
 ];
 
 @NgModule({

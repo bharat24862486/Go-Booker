@@ -16,6 +16,7 @@ import { UserProfileComponent } from './MyComponents/Pages/Profile/user-profile/
 import { PaymentPageComponent } from './MyComponents/Pages/Payment/payment-page/payment-page.component';
 import { FormsModule } from '@angular/forms';
 import { SeatBookingComponent } from './MyComponents/Pages/SeatsPage/seat-booking/seat-booking.component';
+import { FinalPaymentComponent } from './MyComponents/Pages/FinalPayment/final-payment/final-payment.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SeatBookingComponent } from './MyComponents/Pages/SeatsPage/seat-bookin
     SingleMovieCinemaComponent,
     UserProfileComponent,
     PaymentPageComponent,
-    SeatBookingComponent
+    SeatBookingComponent,
+    FinalPaymentComponent
   ],
   imports: [
     BrowserModule,
